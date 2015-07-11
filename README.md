@@ -85,4 +85,16 @@ Here is an example:
 
 - Once you create your project by typing motion create [project name], you can then type rake. This creates a set of files, fires up the iphone simulator, and then runs an interactive console (RubyMotions version of IRB) from which you can type commands that'll pop up on your iphone simulator.
 
+##How to get "Hello Word" to popup on your iphone simulator.
+1. After you download ruby motion and update xcode, run motion create [projectname].
+2. cd into the project and run rake.
+3. Stop your simulator.
+4. Go to /app/app_delegate.rb and within the application method, run the lines
+  ```ruby
+  alert = UIAlertView.new
+  alert.message = "Hello Motion!"
+  alert.show
+  ```
+5. Run rake again. Done!
+
 
