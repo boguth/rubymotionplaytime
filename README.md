@@ -16,11 +16,11 @@ This is my playground for RubyMotion iOS projects.
 
 - RubyMotion is a variant of Ruby. What that means is that you can't use some of Ruby's extremely dynamic methods like eval, and that there are some non-standard features, like:
 
-```ruby
+    ```ruby
 
-functions.with(some, named: parameters).
+    functions.with(some, named: parameters).
 
-```
+    ```
 
 - This allows your Ruby code to be compiled to machine code identical to Objective-C; in other words, the device can't tell the difference between RubyMotion and normal iOS apps. RubyMotion mimics how Objective-C is compiled, thus making the two languages indistinguishable by the iPhone's standards. How?
 
