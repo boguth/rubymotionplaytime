@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+
+# This line tells Ruby to look in the /Library/RubyMotion/lib directory when we user 'require'. This directory is where ruby motion stores a bunch of templates and stuff.
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project/template/ios'
+
+begin
+  require 'bundler'
+  Bundler.require
+rescue LoadError
+end
+
+
+#RubyMotion uses rake for all of its functions, and the rake command runs Rakefile which defines the set of moethods/tasks that can be attached to rake. It gets these methods and tasks frmo the require 'motion/project/template/ios' line above.
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings and properties.
+  app.name = 'HelloMotion'
+end
