@@ -78,7 +78,7 @@ Here is an example:
     ```
   According to Objective-C'ists, this is done to reduce ambiguity and reduce the amount of times the programmer has to look at references or docs to find out about argument order when using a method.
 
-  RubyMotion decided to keep this feature so that that it and the original Apple API's were compatible.
+  RubyMotion decided to keep this feature so that that it and the original Apple API's were compatible. Look at /app/app_delegate.rb for an example.
 
 ##Tips & Tricks
 
