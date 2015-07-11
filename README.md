@@ -46,7 +46,41 @@ Here is an example:
 
 - RubyMotion uses rake for all of its functions, and the rake command runs Rakefile which defines the set of moethods/tasks that can be attached to rake. It gets these methods and tasks from the require 'motion/project/template/ios' line.
 
-#Tips & Tricks
+##New Concepts to a Rubyist
+# Named Arguments
+  - Ruby, like most other languages, creates methods that take arguments like this:
+
+    ```ruby
+
+        def method
+          initialize(arg1, arg2, arg3)
+            @class_name = arg1
+            @width = arg2
+            @height = arg3
+          end
+        end
+
+    ```
+
+  Objective-C is different. It has something called named arguments.In short, when you use named arguments you declare argument types when you pass them in. That sentence is probably super confusing, so here is an example of what named arguments would look like if Ruby used them:
+
+
+    ```ruby
+
+        def method
+          initialize(class_name: arg1, width: arg2, height: arg3)
+            @class_name = arg1
+            @width = arg2
+            @height = arg3
+          end
+        end
+
+    ```
+  According to Objective-C'ists, this is done to reduce ambiguity and reduce the amount of times the programmer has to look at references or docs to find out about argument order when using a method.
+
+  RubyMotion decided to keep this feature so that that it and the original Apple API's were compatible. Look at /app/app_delegate.rb for an example.
+
+##Tips & Tricks
 
 - Once you create your project by typing motion create [project name], you can then type rake. This creates a set of files, fires up the iphone simulator, and then runs an interactive console (RubyMotions version of IRB) from which you can type commands that'll pop up on your iphone simulator.
 
