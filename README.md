@@ -30,7 +30,8 @@ Here is an example:
 
   * Objective-C Runtime has a method called class_getName. It does what you think it does. Objective -C implements it like this:
 
-    '''
+    ```
+
     const char * class_getName ( Class cls );
 
     ```
