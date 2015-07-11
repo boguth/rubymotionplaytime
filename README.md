@@ -14,13 +14,13 @@ This is my playground for RubyMotion iOS projects.
 
 ## Things To Know
 
-- RubyMotion is a variant of Ruby. What that means is that you can't use some of Ruby's extremely dynamic methods like eval, and that there are some non-standard features, like
+- RubyMotion is a variant of Ruby. What that means is that you can't use some of Ruby's extremely dynamic methods like eval, and that there are some non-standard features, like:
 
-'''
-functions.with(some, named: parameters).
-'''
+    '''
+    functions.with(some, named: parameters).
+    '''
 
-This allows your Ruby code to be compiled to machine code identical to Objective-C; in other words, the device can't tell the difference between RubyMotion and normal iOS apps. RubyMotion mimics how Objective-C is compiled, thus making the two languages indistinguishable by the iPhone's standards. How?
+- This allows your Ruby code to be compiled to machine code identical to Objective-C; in other words, the device can't tell the difference between RubyMotion and normal iOS apps. RubyMotion mimics how Objective-C is compiled, thus making the two languages indistinguishable by the iPhone's standards. How?
 
 
 - RubyMotion bases its object model on Objective-C Runtime - a library that provides support for the dynamic properties of the Objective C language (i.e. - functions and data structures that Objective C uses.). Coming from Ruby, I think of this library like one of Ruby's more fundamental classes, like the string class, which provides both data structures and methods to the Ruby language. Swift, Apple's recently developed programming language, also uses this library.
@@ -28,7 +28,7 @@ Here is an example:
 
   * Objective-C Runtime has a method called class_getName. It does what you think it does. Objective -C implements it like this:
 
-    ```
+    '''
     const char * class_getName ( Class cls );
 
     ```
