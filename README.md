@@ -18,16 +18,16 @@ Here is an example:
 
   * Objective-C Runtime has a method called class_getName. It does what you think it does. Objective -C implements it like this:
 
-  ```
-  const char * class_getName ( Class cls );
+    ```
+    const char * class_getName ( Class cls );
 
-  ```
-  2. Swift implements it like this:
+    ```
+  * Swift implements it like this:
 
-  ```
-  func class_getName(_ cls: AnyClass!) -> UnsafePointer<Int8>
+    ```
+    func class_getName(_ cls: AnyClass!) -> UnsafePointer<Int8>
 
-  ```
+    ```
 
 - Because RubyMotion bases its object structure off of the Objective-C Runtime library, its Ruby classes, methods and objects are Objective-C classes, methods and objects respectively. By sharing the same object model infrastructure, Objective-C and RubyMotion APIs can be interchangeable at no additional performance expense. To me, this means the RubyMotion can be used to make iphone apps just like Objective-C can.
 
