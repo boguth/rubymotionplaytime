@@ -47,7 +47,8 @@ Here is an example:
 - RubyMotion uses rake for all of its functions, and the rake command runs Rakefile which defines the set of moethods/tasks that can be attached to rake. It gets these methods and tasks from the require 'motion/project/template/ios' line.
 
 ##New Concepts to a Rubyist
-# Named Arguments
+
+## Named Arguments
   - Ruby, like most other languages, creates methods that take arguments like this:
 
     ```ruby
