@@ -4,16 +4,23 @@
 
 class AppDelegate
     # The arguments in this method definition are wacky. This is an exmaple of an Objectice-C convention. See README for an explanation of named arguments.
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'HelloMotion'
-    rootViewController.view.backgroundColor = UIColor.whiteColor
 
-    navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
+  def application(application, didFinishLaunchingWithOptions:launchOptions) # Some apps may use launchOptions to determine if the app should be started or not.
+    alert = UIAlertView.new #UIAlertViews are the blue popups you see.
+    alert.message = "Hello Motion!"
+    alert.show
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
+    puts "Hello again!"
+    # rootViewController = UIViewController.alloc.init
+    # rootViewController.title = 'HelloMotion'
+    # rootViewController.title=('HelloMotion')
+    # rootViewController.view.backgroundColor = UIColor.whiteColor
+
+    # navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
+
+    # @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    # @window.rootViewController = navigationController
+    # @window.makeKeyAndVisible
 
     true
   end
