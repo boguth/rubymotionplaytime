@@ -9,3 +9,6 @@ A frame describes its shape and position relative it its parent. If, on the wind
 
 ##Window
 The window is the base view of the app. The window is a subclass of UIView. It's called UIWindow.
+
+##Accessing the Delegate Function From that IRB-Esque Thing
+```delegate = UIApplication.sharedApplication.delegate``` allows us to access that view. ```delegate = UIApplication.sharedApplication``` gives us the object that is our application. It is preconfigured to use our delegate function that we created in app_delegate.rb.
